@@ -6,7 +6,6 @@ import Main from './components/mainComponent';
 
 class App extends Component{
 
- 
 render()
 {  return (
     <div >

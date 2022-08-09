@@ -11,15 +11,15 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
         const cmnts = comments.map(comnt => {
             return(
                         <li key = {comnt.id} >
-                            <h5>{comnt.comment}</h5>
-                            <p>--{comnt.author}, &nbsp;
+                            <h3>{comnt.comment}</h3>
+                            <h4>--{comnt.author}, &nbsp;
                             {
                             new Intl.DateTimeFormat('en-US',{
                                 year:'numeric',
                                 month:'short',
                                 day:'2-digit'}).format(new Date(comnt.date))
                             }
-                            </p>
+                            </h4>
                             <br></br>
                         </li>
             );
