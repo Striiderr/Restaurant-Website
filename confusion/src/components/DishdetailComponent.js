@@ -4,11 +4,14 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
 
 
         
-    function RenderComments({comments}){
+    function RenderComments({comments}) {
+       
         if (comments == null) {
             return (<div></div>)
         }
+
         const cmnts = comments.map(comnt => {
+
             return(
                         <li key = {comnt.id} >
                             <h3>{comnt.comment}</h3>
@@ -51,7 +54,7 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
  
             );
         }
-        else{
+        else{   
         return(
             <div></div>
         );
