@@ -19,7 +19,7 @@ return(
     </Media>
 );
 }
-
+ 
 function AboutUs(props) {
     const leaders = props.leaders.map((leader) => {
         return (
