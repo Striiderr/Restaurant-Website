@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 
 class Header extends Component {
-        
+
         constructor(props){
             super(props);
             this.state={
@@ -43,41 +43,41 @@ class Header extends Component {
 
                         <NavbarToggler onClick={this.toggleNav} />
 
-                        <NavbarBrand className='mx-2' href="/">
-                            <img src="assets/images/logo.png" height="35" width="41" alt="Ristorante Con Fusion " />
+                        <NavbarBrand className='ms-5 ps-5' href="/">
+                            <img src="assets/images/logo.png" height="40" width="50" alt="Ristorante Con Fusion " />
                         </NavbarBrand>
 
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar className=''>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/home">
-                                        <span className='fa fa-home fa-lg mx-2'></span>
+                                        <span className='fa fa-home fa-lg mx-1'></span>
                                         Home
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/aboutus">
-                                        <span className='fa fa-info fa-lg mx-2'></span>
+                                        <span className='fa fa-info fa-lg mx-1'></span>
                                         About Us
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/menu">
-                                        <span className='fa fa-list fa-lg mx-2'></span>
+                                        <span className='fa fa-list fa-lg mx-1'></span>
                                         Menu
 
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/contactus">
-                                        <span className='fa fa-address-card fa-lg mx-2'></span>
+                                        <span className='fa fa-address-card fa-lg mx-1'></span>
                                         Contact Us
                                     </NavLink>
                                 </NavItem>
                             </Nav>
                             <Nav className='ms-auto' navbar>
                                 <NavItem>
-                                    <Button outline onClick={this.toggleModal}>
+                                    <Button className="fw-bold fs-6 bg-light text-primary me-4" outline onClick={this.toggleModal}>
                                         <span className='fa fa-sign-in fa-lg'></span> Login
                                     </Button>
                                 </NavItem>
@@ -90,9 +90,9 @@ class Header extends Component {
 
                 <div className='container-fluid jumbotron'>
                     <div className='row row-header'>
-                        <div className='col-12 col-sm-6'>
-                            <h1>Restorante Con Fusion</h1>
-                            <p>We take inspiration from the world's best cuisines, and create a unique fusion experience.Our lipsmacking creation will tickle your culinary senses!</p>
+                        <div className='col-12 col-sm-6 ms-3'>
+                            <h1 className='fw-bold fs-1'>Restorante Con Fusion</h1>
+                            <p className='fw-light fs-6'>We take inspiration from the world's best cuisines, and create a unique fusion experience.Our lipsmacking creation will tickle your culinary senses!</p>
                         </div>
                     </div>
                 </div>
