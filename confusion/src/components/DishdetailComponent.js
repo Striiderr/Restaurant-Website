@@ -1,5 +1,5 @@
 import React from "react";
-
+import { baseUrl } from '../shared/baseUrl';
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, Breadcrumb, BreadcrumbItem
@@ -55,7 +55,7 @@ function RenderCard({ dish }) {
         return (
             <div className="col-12 col-md-5 m-3 ">
                 <Card>
-                    <CardImg width="100%" object src={dish.image} alt={dish.name}></CardImg>
+                <CardImg top src={baseUrl + dish.image} alt={dish.name} />
                     <CardBody>
                         <CardTitle className="fw-bold fs-5 my-0" >{dish.name}</CardTitle>
                         <CardText>{dish.description}</CardText>
