@@ -6,7 +6,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import CommentForm from './CommentComponent';
-
+import  {Loading} from './LoadingComponent';
 
 
 function RenderComments({ comments,addComment, dishId }) {
@@ -94,6 +94,24 @@ function RenderCard({ dish }) {
 
 const DishDetail = (props) => {
 
+        if(props.isLoading){
+            return (
+                <div className="container">
+                    <div className="row">
+                        <Loading/>
+                    </div>
+                </div>
+            )
+        }
+        else if(props.errMes){
+            return (
+                <div className="container">
+                    <div className="row">
+                        <h4>{props.errMes}</h4>
+                    </div>
+                </div>
+            )
+        }
     return (
         <div className="container">
             <div className='row'>
