@@ -9,7 +9,7 @@ import CommentForm from './CommentComponent';
 import  {Loading} from './LoadingComponent';
 
 
-function RenderComments({ comments,addComment, dishId }) {
+function RenderComments({ comments,postComment, dishId }) {
     if (comments == null) {
         return (<div></div>)
     }
@@ -42,7 +42,7 @@ function RenderComments({ comments,addComment, dishId }) {
                 <ul className="list-unstyled m-2">
                     {cmnts}
                 </ul>
-                <CommentForm dishId={dishId} addComment={addComment}/>
+                <CommentForm dishId={dishId} postComment={postComment}/>
             </div>
         );
     
@@ -133,7 +133,7 @@ const DishDetail = (props) => {
             <div className="row justify-content-center">
                     <RenderCard dish={props.dish} />
                     <RenderComments comments={props.comments}
-                                    addComment={props.addComment}
+                                    postComment={props.postComment}
                                     dishId={props.dish.id}
       />
             </div>
